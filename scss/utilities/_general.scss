@@ -1,0 +1,124 @@
+@use 'funciones' as *;
+@use '../utilities/variables' as *;
+
+// Reset y configuración base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: $font-size-base;
+}
+
+html,
+body {
+  font-family: $fuentemain;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: url("../assets/img/dientin.png") 12 12, auto;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.espacio-vacio {
+    padding: 20px 0; /* Espacio arriba y abajo del elemento */
+  }
+
+// Clase reutilizable con padding adaptable
+.allpadding {
+  @include responsive-padding();
+  
+    h1,
+    h2 {
+      padding-top: 1em;
+      color: $colortitulo;
+    }
+  }
+
+// Tipografía y espaciado
+p {
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: 1.6rem;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @media (max-width: 1375px) {
+    font-size: 1.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  cursor: url("../assets/img/dientinlink.png") 12 12, pointer;
+  &:hover,
+  &:focus,
+  &:visited {
+    color: white;
+  }
+  @media (max-width: 1375px) {
+    font-size: 1.5rem;
+  }
+}
+
+li,
+strong {
+  font-size: 1.5rem;
+}
+
+.row.align-items-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 1390px) {
+  .servicio-imagen {
+    order: 1;
+  }
+
+  .servicio-texto {
+    order: 2;
+  }
+}
+
+// Títulos
+h1,
+h2 {
+  text-align: center;
+  line-height: 2%;
+  padding-bottom: 1em;
+  color: $colortitulo;
+}
+
+h1 {
+  padding-top: 1em;
+}
+.mensaje {
+    text-align: center;
+    margin: 20px 0;
+  
+    &-texto {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    &-boton {
+      @include boton-base(#28a745, #218838);
+    }
+  }
+
+/* Texto mensaje */
+.mensaje-texto {
+  margin-bottom: 15px;
+  color: $colortitulo;
+}

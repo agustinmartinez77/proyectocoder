@@ -1,0 +1,51 @@
+@use '../utilities/funciones' as *;
+
+.contacto-container * {
+  all: unset;
+  all: revert; 
+  box-sizing: border-box;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 2rem;
+  font-family: inherit;
+}
+
+.contacto-left,
+.contacto-right {
+  flex: 1 1 48%;
+  min-width: 300px;
+  font-size: 1.5rem;
+}
+
+.contacto-left label,
+.contacto-right label {
+  display: block;
+  margin: 5px 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contacto-left input,
+.contacto-right textarea {
+  @include input-form(#ccc, 10px, 5px);
+}
+
+.contacto-left input:focus,
+.contacto-right textarea:focus {
+  outline: none;
+  border-color: #00849b;
+  box-shadow: 0 0 0 2px rgba(0, 132, 155, 0.2);
+}
+
+.contacto-right button {
+  @include boton-form(#00849b, #006f7f, 10px 20px, 5px);
+}
+
+.contacto-right button:hover {
+  @include boton-form(#006f7f, #004d59, 10px 20px, 5px);
+}

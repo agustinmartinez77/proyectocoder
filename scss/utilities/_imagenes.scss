@@ -1,0 +1,39 @@
+@use 'funciones' as *;
+
+.banner {
+  img {
+    @extend %img-fluid;
+  }
+}
+
+/* Contenedor de los servicios */
+.servicios-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 15em;
+}
+
+/* Estilo de las imágenes dentro de los cuadros */
+.servicios {
+  img {
+    max-width: 300px;
+    @extend %img-fluid;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos transición */
+
+    &:hover {
+      @include hover-zoom-shadow;
+      transform: scale(1.1); /* Ejemplo de zoom */
+    }
+  }
+}
+
+.servicio-imagen {
+  vertical-align: middle;
+
+  img {
+    @extend %img-fluid;
+  }
+}

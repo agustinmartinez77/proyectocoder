@@ -1,0 +1,29 @@
+@use '../utilities/funciones' as *;
+
+.contenedor-servicios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.servicio-item {
+  iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+
+    input[type="email"] {
+      @include input-form(#ccc, 10px, 4px);
+    }
+
+    button[type="submit"] {
+      @include boton-form(#00849b, #006f80, 12px, 4px);
+    }
+  }
+}

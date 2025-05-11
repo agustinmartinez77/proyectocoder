@@ -1,0 +1,503 @@
+@charset "UTF-8";
+header, header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-content .header-right {
+  display: flex;
+  align-items: center;
+}
+
+header .menu .menu-item a.button {
+  background-color: #205d9e;
+  padding: 12px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header .menu .menu-item a.button:hover {
+  background-color: #2d92ff;
+  transform: scale(1.05);
+}
+
+.banner img, .servicios img, .servicio-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 62%;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: url("../assets/img/dientin.png") 12 12, auto;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.espacio-vacio {
+  padding: 20px 0; /* Espacio arriba y abajo del elemento */
+}
+
+.allpadding {
+  padding-left: 25em;
+  padding-right: 25em;
+}
+@media (max-width: 1120px) {
+  .allpadding {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.allpadding h1,
+.allpadding h2 {
+  padding-top: 1em;
+  color: #001454;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: 1.6rem;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@media (max-width: 1375px) {
+  p {
+    font-size: 1.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  cursor: url("../assets/img/dientinlink.png") 12 12, pointer;
+}
+a:hover, a:focus, a:visited {
+  color: white;
+}
+@media (max-width: 1375px) {
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+li,
+strong {
+  font-size: 1.5rem;
+}
+
+.row.align-items-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 1390px) {
+  .servicio-imagen {
+    order: 1;
+  }
+  .servicio-texto {
+    order: 2;
+  }
+}
+h1,
+h2 {
+  text-align: center;
+  line-height: 2%;
+  padding-bottom: 1em;
+  color: #001454;
+}
+
+h1 {
+  padding-top: 1em;
+}
+
+.mensaje {
+  text-align: center;
+  margin: 20px 0;
+}
+.mensaje-texto {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.mensaje-boton {
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #28a745;
+  transition: background-color 0.3s ease;
+}
+.mensaje-boton:hover {
+  background-color: #218838;
+}
+
+/* Texto mensaje */
+.mensaje-texto {
+  margin-bottom: 15px;
+  color: #001454;
+}
+
+/* Contenedor de los servicios */
+.servicios-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 15em;
+}
+
+/* Estilo de las imágenes dentro de los cuadros */
+.servicios img {
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos transición */
+}
+.servicios img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1); /* Ejemplo de zoom */
+}
+
+.servicio-imagen {
+  vertical-align: middle;
+}
+.contacto-container * {
+  all: unset;
+  all: revert;
+  box-sizing: border-box;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 2rem;
+  font-family: inherit;
+}
+
+.contacto-left,
+.contacto-right {
+  flex: 1 1 48%;
+  min-width: 300px;
+  font-size: 1.5rem;
+}
+
+.contacto-left label,
+.contacto-right label {
+  display: block;
+  margin: 5px 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contacto-left input,
+.contacto-right textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  background-color: white;
+}
+
+.contacto-left input:focus,
+.contacto-right textarea:focus {
+  outline: none;
+  border-color: #00849b;
+  box-shadow: 0 0 0 2px rgba(0, 132, 155, 0.2);
+}
+
+.contacto-right button {
+  background-color: #00849b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.contacto-right button:hover {
+  background-color: #006f7f;
+}
+
+.contacto-right button:hover {
+  background-color: #006f7f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.contacto-right button:hover:hover {
+  background-color: #004d59;
+}
+
+.footer {
+  background-color: #00849b;
+  color: white;
+  padding: 20px;
+  font-size: 16px; /* Tamaño general */
+}
+
+.footer * {
+  font-size: inherit;
+}
+
+.footer-columna {
+  text-align: left;
+}
+
+/* Formulario */
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+.footer-form input[type=email],
+.footer-form button {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1.5rem;
+  background-color: white;
+}
+.footer-form button {
+  background-color: #00a8c5;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.footer-form button:hover {
+  background-color: #00849b;
+}
+.footer-form button:hover {
+  background-color: #00849b;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  cursor: url("../assets/img/dientinlink.png") 12 12, pointer;
+}
+.footer-form button:hover:hover {
+  background-color: #006f80;
+}
+
+/* Icono Instagram */
+.footer-icon-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Texto mensaje */
+.mensaje-texto {
+  margin-bottom: 15px;
+  color: #001454;
+}
+
+/* Links */
+.footer-link {
+  color: #00a8c5;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.footer-link:hover {
+  text-decoration: underline;
+  color: #48ff00;
+}
+
+/* Para las columnas de Consultorio y Contacto */
+.footer-consultorio-item,
+.footer-contacto-item {
+  margin-bottom: 8px; /* Espacio entre cada par de items */
+}
+
+/* Estilos para los títulos */
+.footer-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: white; /* Color blanco para los títulos */
+}
+
+/* Estilo para los textos */
+.footer-consultorio-item span,
+.footer-contacto-item span,
+.footer-contacto-item a {
+  font-size: 14px; /* Tamaño de letra consistente */
+  color: white; /* Color blanco para todos los textos */
+}
+
+/* Responsive: columnas apiladas */
+@media (max-width: 768px) {
+  .footer-columna {
+    text-align: center;
+  }
+}
+header {
+  background-color: #00849b;
+  color: white;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+header .header-content {
+  width: 100%;
+  position: relative;
+}
+header .header-content .header-left {
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+}
+header #check {
+  display: none;
+}
+header .checkbtn {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  position: relative;
+  z-index: 10;
+}
+header .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+header .menu .menu-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+header .menu .menu-item a:hover {
+  color: #f0f0f0;
+}
+header .header-left a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+}
+header .header-left a:hover, header .header-left a:focus, header .header-left a:visited {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 1375px) {
+  header .header-left a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1065px) {
+  header .checkbtn {
+    display: block;
+  }
+  header .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #00849b;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 15em;
+    justify-content: flex-start;
+    padding-top: 25em;
+    transition: right 0.3s ease-in-out;
+  }
+  header .menu .menu-item {
+    margin: 20px 0;
+  }
+  header #check:checked + .checkbtn + .menu {
+    right: 0;
+  }
+}
+
+.contenedor-servicios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.servicio-item iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  align-items: center;
+}
+.servicio-item form {
+  width: 100%;
+}
+.servicio-item form input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  background-color: white;
+}
+.servicio-item form button[type=submit] {
+  background-color: #00849b;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.servicio-item form button[type=submit]:hover {
+  background-color: #006f80;
+}
+
+/*# sourceMappingURL=styles.css.map */

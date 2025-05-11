@@ -1,0 +1,89 @@
+@use '../utilities/funciones' as *;
+@use '../utilities/variables' as *;
+
+.footer {
+  background-color: $colorfondo;
+  color: white;
+  padding: 20px;
+  font-size: 16px; /* Tamaño general */
+}
+
+.footer * {
+  font-size: inherit; 
+}
+
+.footer-columna {
+  text-align: left;
+}
+
+/* Formulario */
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+
+  input[type="email"],
+  button {
+    @include input-form(#ddd, 5px, 5px);
+  }
+
+  button {
+    @include boton-form(#00a8c5, #00849b, 5px, 5px);
+  }
+
+  button:hover {
+    @include boton-form(#00849b, #006f80, 5px, 5px);
+    cursor: url("../assets/img/dientinlink.png") 12 12, pointer;
+  }
+}
+
+/* Icono Instagram */
+.footer-icon-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Texto mensaje */
+ .mensaje-texto {
+  margin-bottom: 15px;
+  color: $colortitulo;
+}
+
+/* Links */
+.footer-link {
+  @include link-style(#00a8c5);
+
+  &:hover {
+    text-decoration: underline;
+    color: #48ff00;
+  }
+}
+
+/* Para las columnas de Consultorio y Contacto */
+.footer-consultorio-item,
+.footer-contacto-item {
+  margin-bottom: 8px; /* Espacio entre cada par de items */
+}
+
+/* Estilos para los títulos */
+.footer-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: white; /* Color blanco para los títulos */
+}
+
+/* Estilo para los textos */
+.footer-consultorio-item span,
+.footer-contacto-item span,
+.footer-contacto-item a {
+  font-size: 14px; /* Tamaño de letra consistente */
+  color: white; /* Color blanco para todos los textos */
+}
+
+/* Responsive: columnas apiladas */
+@media (max-width: 768px) {
+  .footer-columna {
+    text-align: center;
+  }
+}
