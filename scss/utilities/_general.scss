@@ -122,3 +122,46 @@ h1 {
   margin-bottom: 15px;
   color: $colortitulo;
 }
+.preparacion-consulta {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h2 {
+    font-size: 2rem;
+    color: $colortitulo;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  // 2 columnas iguales
+    gap: 1.5rem;
+  }
+
+  &__item {
+    background: #f0f6fb;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.2);
+    font-size: 1.5rem;
+    color: #2c3e50;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+      cursor: default;
+    }
+  }
+
+  // Responsive: una columna en pantallas chicas
+  @media (max-width: 600px) {
+    &__items {
+      grid-template-columns: 1fr;  // 1 columna
+    }
+  }
+}

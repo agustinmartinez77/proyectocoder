@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Enzo Ramos</title>
+    <meta name="description" content="Consultorio odontológico del Dr. Enzo. Atención personalizada, tecnología moderna y casos clínicos destacados en todas las especialidades.">
     <link rel="stylesheet" href="./css/styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
@@ -27,7 +28,7 @@
     </header>
     <!-- Banner header -->
     <div class="banner">
-      <img src="assets/img/consultorio.jpg" alt="Banner Dr. Enzo Ramos" />
+      <img src="assets/img/consultorio.jpg" alt="Imagen del consultorio" />
     </div>
     <div class="allpadding">
       <main>
@@ -44,33 +45,96 @@
           <!-- Imagen 1 -->
           <div class="col-6 col-sm-6 col-md-3">
             <div class="servicios">
-              <img src="assets/img/caries.png" alt="Caries" class="img-fluid">
+              <img src="assets/img/caries.png" alt="Servicio de reparación de caries" class="img-fluid">
             </div>
           </div>
           <!-- Imagen 2 -->
           <div class="col-6 col-sm-6 col-md-3">
             <div class="servicios">
-              <img src="assets/img/blanqueamiento.png" alt="Blanqueamiento" class="img-fluid">
+              <img src="assets/img/blanqueamiento.png" alt="Servicio de blanqueamiento" class="img-fluid">
             </div>
           </div>
           <!-- Imagen 3 -->
           <div class="col-6 col-sm-6 col-md-3">
             <div class="servicios">
-              <img src="assets/img/limpieza.png" alt="Limpieza" class="img-fluid">
+              <img src="assets/img/limpieza.png" alt="Servicio de limpieza" class="img-fluid">
             </div>
           </div>
           <!-- Imagen 4 (Ver Más) -->
           <div class="col-6 col-sm-6 col-md-3">
             <div class="servicios">
-              <img src="assets/img/ver mas.png" alt="Ver más" class="img-fluid">
+              <a href="pages/servicios.html" class="button">
+                <img src="assets/img/ver mas.png" alt="Ver más servicios" class="img-fluid">
+              </a>  
             </div>
           </div>
         </div>
       </section>
       <div class="espacio-vacio"></div>
       <section>
+        <h2>Testimonios de pacientes</h2>
+        <div class="bloque-testimonios__wrapper">
+          <article class="bloque-testimonios__item bt1">
+            <h4>"Excelente atención, muy profesional y humano. Me explicó todo con mucha paciencia."</h4>
+            <div class="stars">
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+            </div>
+            <h4>- Ana P., 38 años</h4>
+          </article>
+          <article class="bloque-testimonios__item bt2">
+            <h4>"El consultorio impecable y el doctor muy claro. Me sentí muy cómoda desde el principio."</h4>
+            <div class="stars">
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+            </div>
+            <h4>- Ricardo S., 42 años</h4>
+          </article>
+          <article class="bloque-testimonios__item bt3">
+            <h4>"Fui por recomendación y no me arrepiento. Atención de primera y trato cálido."</h4>
+            <div class="stars">
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star empty">☆</span>
+            </div>
+            <h4>- Lucía M., 29 años</h4>
+          </article>
+          <article class="bloque-testimonios__item bt4">
+            <h4>"Muy buena experiencia. Se nota la vocación y el compromiso en cada detalle."</h4>
+            <div class="stars">
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star full">★</span>
+              <span class="star empty">☆</span>
+            </div>
+            <h4>- Martín G., 45 años</h4>
+          </article>
+        </div>
+      </section>
+      <section class="sonrisas">
+        <h2 class="sonrisas__titulo">Sonrisas que inspiran</h2>
+        <div class="sonrisas__carrusel">
+            <img src="assets/img/smile.jpg" alt="Paciente sonriendo 1" class="sonrisas__img" />
+            <img src="assets/img/smile2.jpg" alt="Paciente sonriendo 2" class="sonrisas__img" />
+            <img src="assets/img/smile3.jpg" alt="Paciente sonriendo 3" class="sonrisas__img" />
+            <img src="assets/img/smile4.jpg" alt="Paciente sonriendo 4" class="sonrisas__img" />
+            <img src="assets/img/smile5.jpg" alt="Paciente sonriendo 5" class="sonrisas__img" />
+            <img src="assets/img/smile7.jpg" alt="Paciente sonriendo 6" class="sonrisas__img" />
+          </div>
+      </section>
+      <section>
+        <h2>¿Qué estás esperando?</h2>
           <p>
-          En nuestra clínica, cuidamos tu sonrisa con tratamientos personalizados y
+          En nuestra clínica, <strong>cuidamos tu sonrisa</strong> con tratamientos personalizados y
           tecnologías actuales. Limpiezas profundas, blanquemientos, reparación y
           mucho más para que luzcas tu mejor versión.
           </p>
@@ -115,7 +179,6 @@
               <a href="https://www.instagram.com/dr.enzoramos/" class="footer-link">dr.enzoramos</a>
             </div>
           </div>
-    
           <!-- Columna Newsletter -->
           <div class="col-12 col-md-3 mb-4 footer-columna">
             <strong class="footer-title">Newsletter:</strong>
@@ -124,7 +187,6 @@
               <button type="submit" class="footer-button">Enviar</button>
             </form>
           </div>
-    
           <!-- Columna Icono Instagram -->
           <div class="col-12 col-md-3 mb-4 footer-columna text-center">
             <a href="https://www.instagram.com/dr.enzoramos/" class="footer-icon">

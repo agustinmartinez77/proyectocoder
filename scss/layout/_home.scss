@@ -27,3 +27,40 @@
     }
   }
 }
+.bloque-testimonios__wrapper {
+  max-width: 1100px; /* o más, según convenga */
+  margin: 0 auto;
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bloque-testimonios__item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 12px 15px; /* Menos padding para que el texto tenga más ancho */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  .stars {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: gold;
+    user-select: none;
+
+    .star {
+      margin-right: 4px;
+      &.full {
+        color: gold;
+      }
+      &.empty {
+        color: #ccc;
+      }
+    }
+  }
+}
